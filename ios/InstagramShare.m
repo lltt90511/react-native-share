@@ -93,7 +93,7 @@
                    reject:(RCTPromiseRejectBlock)reject
                    resolve:(RCTPromiseResolveBlock)resolve {
     
-    NSURL *URL = [self fileURLWithTemporaryImageData:UIImageJPEGRepresentation(base64Image, 0.9)];
+    NSURL *URL = [self fileURLWithTemporaryImageData:UIImagePNGRepresentation(base64Image)];
     __block PHAssetChangeRequest *_mChangeRequest = nil;
     __block PHObjectPlaceholder *placeholder;
     

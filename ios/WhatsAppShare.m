@@ -70,7 +70,7 @@ resolve:(RCTPromiseResolveBlock)resolve {
         NSString * documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
         NSString * filePath = [documentsPath stringByAppendingPathComponent:@"/whatsAppTmp.wai"];
         
-        [UIImageJPEGRepresentation(image, 1.0) writeToFile:filePath atomically:YES];
+        [UIImagePNGRepresentation(image) writeToFile:filePath atomically:YES];
       
         [self shareMedia:filePath documentUTI:@"net.whatsapp.image"];
       
